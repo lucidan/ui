@@ -11,8 +11,7 @@
 	import { getOwnerDocument } from '../utils/owner-document';
 	import type { Maybe } from '../utils/types';
 	import { percentToValue, valueToPercent } from '../utils/value-percent';
-	import type { SliderAlignment, SliderOrientation } from './Slider.d';
-	import { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
+	import type { SliderAlignment, SliderOrientation } from './Slide./Sliderort { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
 
 	export let element: HTMLDivElement = null;
 	$: if (sliderEl) element = sliderEl;
@@ -75,9 +74,7 @@
 	// We may want to use accept a `handlePosition` prop instead and let apps
 	// define their own positioning logic, similar to how we do for popovers.
 	$: handlePosition = `calc(${trackPercent}% - ${
-		handleAlignment === 'center'
-			? `${handleSize}px / 2`
-			: `${handleSize}px * ${trackPercent * 0.01}`
+		handleAlignment === 'center' ? `${handleSize}px / 2` : `${handleSize}px * ${trackPercent / 100}`
 	})`;
 
 	$: _ariaValueText = getAriaValueText ? getAriaValueText(_value) : ariaValueText;

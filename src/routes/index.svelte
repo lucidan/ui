@@ -1,5 +1,5 @@
 <script>
-	import Slider from '../lib/Slider/Slider.svelte';
+	import Slider from '../lib/slider/Slider.svelte';
 	import '../lib/Slider/styles.css';
 
 	let visible = true;
