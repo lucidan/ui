@@ -1,0 +1,22 @@
+{
+	"name": "saral-ui",
+	"version": "0.0.2",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"pub": "pnpm package && cd package && pnpm publish"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "next",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.44.3",
+		"svelte-preprocess": "^4.10.1",
+		"svelte2tsx": "^0.4.12",
+		"typescript": "^4.5.4"
+	},
+	"type": "module",
+	"dependencies": {
+		"csstype": "^3.0.10"
+	}
+}
