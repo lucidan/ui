@@ -11,4 +11,4 @@
 	<button on:click={() => (visible = !visible)}>Show </button>
 </p>
 
-<Slider />
+<Slider handleAlignment="contain" />

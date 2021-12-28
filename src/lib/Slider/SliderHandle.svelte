@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { style } from '../utils/actions/style.action';
+	import { style } from '../utils/style';
 	import { composeEventHandlers } from '../utils/compose-event-handler';
 	import { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
 

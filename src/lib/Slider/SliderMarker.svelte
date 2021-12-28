@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { style } from '../utils/actions/style.action';
+	import { style } from '../utils/style';
 	import { valueToPercent } from '../utils/value-percent';
 	import { sliderSharedData } from './slider.store';
 
