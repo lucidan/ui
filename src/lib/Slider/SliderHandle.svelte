@@ -49,10 +49,10 @@
 	role="slider"
 	tabIndex={disabled ? -1 : 0}
 	data-reach-slider-handle=""
-	use:style={{
+	style={style({
 		position: 'absolute',
 		...(isVertical ? { bottom: handlePosition } : { left: handlePosition }),
-	}}
+	})}
 	on:blur={composeEventHandlers(onBlur, () => setHasFocus(false))}
 	on:focus={composeEventHandlers(onFocus, () => setHasFocus(true))}
 	on:keydown={composeEventHandlers(onKeyDown, handleKeyDown)}

@@ -32,10 +32,10 @@
 	<div
 		{...elementProps}
 		bind:this={_element}
-		use:style={{
+		style={style({
 			position: 'absolute',
 			...(isVertical ? { bottom: absoluteStartPosition } : { left: absoluteStartPosition }),
-		}}
+		})}
 		data-reach-slider-marker=""
 		data-disabled={disabled ? '' : undefined}
 		data-orientation={orientation}
