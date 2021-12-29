@@ -13,20 +13,19 @@ type PRect = Partial<DOMRect> & {
  * @param node
  * @param observeOrOptions Pass `true` to observe, `false` to ignore.
  */
-export function rect(node: HTMLElement, observe: boolean = true) {
-	fireOnChange(node.getBoundingClientRect());
+export function rect(
+	node: HTMLElement,
+	options: { observe?: boolean; onChange?: (rect: PRect) => void } = {}
+) {
+	let { observe = true, onChange = () => {} } = options;
 
 	const observer = observeRect(node, (rect) => {
 		if (!observe) return;
 
-		fireOnChange(rect);
+		onChange(rect);
 	});
 
 	observer.observe();
-
-	function fireOnChange(data: PRect) {
-		node.dispatchEvent(new CustomEvent('rectchange', { detail: data }));
-	}
 
 	return {
 		update: (_observe: boolean) => {

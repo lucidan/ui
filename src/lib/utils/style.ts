@@ -11,20 +11,6 @@ const kebabize = (str: string) => {
 		.join('');
 };
 
-/**
- * Svelte action to add style on `body`. style can either be a string or an object.
- *
- * @example
- *
- *```svelte
- * <script>
- *   import { style } from 'svelte-body';
- * </script>
- *
- * <svelte:body use:style={"background-color: blue;"} />
- * <svelte:body use:style={{ backgroundColor: 'blue' }} />
- *```
- */
 export const style = (styleData: CSSProperties = {}) => {
 	let str = '';
 

@@ -15,4 +15,4 @@
 
 <Slider handleAlignment="contain" />
 
-<div use:rect={true} on:rectchange={(e) => console.log(e)} />
+<div use:rect={{ onChange: console.log }} />
