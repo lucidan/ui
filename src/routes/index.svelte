@@ -1,4 +1,6 @@
 <script>
+	import { rect } from '../lib/rect';
+
 	import Slider from '../lib/slider/Slider.svelte';
 	import '../lib/Slider/styles.css';
 
@@ -12,3 +14,5 @@
 </p>
 
 <Slider handleAlignment="contain" />
+
+<div use:rect={true} on:rectchange={(e) => console.log(e)} />

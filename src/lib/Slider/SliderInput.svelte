@@ -11,7 +11,8 @@
 	import { getOwnerDocument } from '../utils/owner-document';
 	import type { Maybe } from '../utils/types';
 	import { percentToValue, valueToPercent } from '../utils/value-percent';
-	import type { SliderAlignment, SliderOrientation } from './Slide./Sliderort { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
+	import type { SliderAlignment, SliderOrientation } from './Slider.d';
+	import { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
 
 	export let element: HTMLDivElement = null;
 	$: if (sliderEl) element = sliderEl;
