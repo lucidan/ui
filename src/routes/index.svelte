@@ -1,8 +1,8 @@
 <script>
 	import { rect } from '../lib/rect';
-
 	import Slider from '../lib/slider/Slider.svelte';
 	import '../lib/Slider/styles.css';
+	import { VisuallyHidden } from '../lib/visually-hidden';
 
 	let visible = true;
 </script>
@@ -16,3 +16,5 @@
 <Slider handleAlignment="contain" />
 
 <div use:rect={{ onChange: console.log }} />
+
+<VisuallyHidden>WOW!!!</VisuallyHidden>

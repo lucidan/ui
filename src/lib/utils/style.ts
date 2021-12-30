@@ -11,12 +11,23 @@ const kebabize = (str: string) => {
 		.join('');
 };
 
+const vendorRe = /^(Webkit|Moz|O|ms)/;
+
 export const style = (styleData: CSSProperties = {}) => {
 	let str = '';
 
-	for (const [property, value] of Object.entries(styleData)) {
-		const kebabedString = kebabize(property);
+	for (let [property, value] of Object.entries(styleData)) {
+		const isPropertyAVendor = vendorRe.test(property);
+
+		property = property.replace(vendorRe, '-$1');
+
+		let kebabedString = kebabize(property);
+		if (isPropertyAVendor && !kebabedString.startsWith('--')) {
+			kebabedString = kebabedString.substring(1);
+		}
+
 		str += `${kebabedString}: ${value};`;
 	}
+
 	return str;
 };
