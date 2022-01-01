@@ -1,4 +1,4 @@
-export * from './Slider.d';
+export type { SliderAlignment, SliderOrientation } from './Slider.d';
 export { default as Slider } from './Slider.svelte';
 export { default as SliderHandle } from './SliderHandle.svelte';
 export { default as SliderInput } from './SliderInput.svelte';
