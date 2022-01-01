@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { style } from '../utils/style';
+	import type { ElementProps } from '../utils/types';
 	import { valueToPercent } from '../utils/value-percent';
 	import { sliderSharedData } from './slider.store';
 
@@ -8,10 +9,7 @@
 	$: if (_element) element = _element;
 
 	export let value: number;
-	export let elementProps: Omit<
-		svelte.JSX.HTMLAttributes<HTMLDivElement>,
-		keyof svelte.JSX.DOMAttributes<HTMLDivElement>
-	> = {};
+	export let elementProps: ElementProps = {};
 
 	$: ({
 		disabled,

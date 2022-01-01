@@ -9,7 +9,7 @@
 	import { makeId } from '../utils/make-id';
 	import { noop } from '../utils/noop';
 	import { getOwnerDocument } from '../utils/owner-document';
-	import type { Maybe } from '../utils/types';
+	import type { ElementProps, Maybe } from '../utils/types';
 	import { percentToValue, valueToPercent } from '../utils/value-percent';
 	import type { SliderAlignment, SliderOrientation } from './Slider.d';
 	import { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
@@ -46,10 +46,7 @@
 	export let onTouchStart: (event: TouchEvent) => void = null;
 	export let orientation: SliderOrientation = 'horizontal';
 	export let step = 0;
-	export let elementProps: Omit<
-		svelte.JSX.HTMLAttributes<HTMLDivElement>,
-		keyof svelte.JSX.DOMAttributes<HTMLDivElement>
-	> = {};
+	export let elementProps: ElementProps = {};
 
 	let touchID: number = undefined;
 	let id = useId(elementProps.id);

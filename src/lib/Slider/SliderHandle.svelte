@@ -2,6 +2,7 @@
 	import { style } from '../utils/style';
 	import { composeEventHandlers } from '../utils/compose-event-handler';
 	import { sliderCallbacks, sliderElements, sliderSharedData } from './slider.store';
+	import type { ElementProps } from '../utils/types';
 
 	export let element: HTMLDivElement = null;
 	let _element: HTMLDivElement;
@@ -10,10 +11,7 @@
 	export let onBlur: (event: FocusEvent) => void = null;
 	export let onFocus: (event: FocusEvent) => void = null;
 	export let onKeyDown: (event: KeyboardEvent) => void = null;
-	export let elementProps: Omit<
-		svelte.JSX.HTMLAttributes<HTMLDivElement>,
-		keyof svelte.JSX.DOMAttributes<HTMLDivElement>
-	> = {};
+	export let elementProps: ElementProps = {};
 
 	$: ({
 		ariaLabel,

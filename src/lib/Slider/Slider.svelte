@@ -125,7 +125,7 @@
 	>;
 </script>
 
-<SliderInput {...$$props} bind:element={_element} data-reach-slider="">
+<SliderInput {...$$props} bind:element={_element} elementProps={{ 'data-reach-slider': '' }}>
 	<SliderTrack>
 		<SliderRange />
 		<SliderHandle />
