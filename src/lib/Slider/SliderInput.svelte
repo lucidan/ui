@@ -66,7 +66,7 @@
 	$: trackPercent = valueToPercent(_value, min, max);
 	$: isVertical = orientation === 'vertical';
 
-	$: handleSize = isVertical ? handleDimensions.height : handleDimensions.width;
+	$: handleSize = (isVertical ? handleDimensions?.height : handleDimensions?.width) || 16;
 
 	// TODO: Consider removing the `handleAlignment` prop
 	// We may want to use accept a `handlePosition` prop instead and let apps
