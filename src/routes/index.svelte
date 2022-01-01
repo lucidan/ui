@@ -1,10 +1,10 @@
 <script>
-	import { rect } from '../lib/rect';
+	import { rect } from '../lib';
+
+	import { Alert } from '../lib/alert';
 	import Slider from '../lib/slider/Slider.svelte';
 	import '../lib/Slider/styles.css';
-	import { VisuallyHidden } from '../lib/visually-hidden';
-
-	let visible = true;
+	let visible = false;
 </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -15,6 +15,8 @@
 
 <Slider handleAlignment="contain" />
 
-<div use:rect={{ onChange: console.log }} />
+{#if visible}
+	<Alert>I am a alert</Alert>
+{/if}
 
-<VisuallyHidden>WOW!!!</VisuallyHidden>
+<div use:rect={{ onChange: console.log }} />
