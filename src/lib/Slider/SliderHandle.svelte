@@ -57,3 +57,32 @@
 >
 	<slot />
 </div>
+
+<style>
+	:root {
+		--reach-slider: 1;
+	}
+
+	[data-reach-slider-handle] {
+		width: 16px;
+		height: 16px;
+		background: #1159a6;
+		border-radius: 10px;
+		z-index: 1;
+		transform-origin: center;
+	}
+
+	[data-reach-slider-handle][aria-orientation='horizontal'] {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	[data-reach-slider-handle][aria-orientation='horizontal']:focus {
+		transform: translateY(-50%);
+	}
+
+	[data-reach-slider-handle][aria-orientation='vertical'] {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+</style>

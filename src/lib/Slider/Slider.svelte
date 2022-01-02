@@ -132,3 +132,9 @@
 		<slot />
 	</SliderTrack>
 </SliderInput>
+
+<style>
+	:root {
+		--reach-slider: 1;
+	}
+</style>

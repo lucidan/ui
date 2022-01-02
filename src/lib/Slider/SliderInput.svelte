@@ -436,3 +436,31 @@
 		<input type="hidden" value={_value} {name} id={id && makeId('input', id)} />
 	{/if}
 </div>
+
+<style>
+	:root {
+		--reach-slider: 1;
+	}
+
+	[data-reach-slider-input] {
+		max-width: 100%;
+		user-select: none;
+	}
+
+	[data-reach-slider-input][data-orientation='horizontal'] {
+		height: 0.5rem;
+	}
+
+	[data-reach-slider-input][data-orientation='vertical'] {
+		width: 0.5rem;
+		/* the height is somewhat arbitrary but necessary for vertical sliders for
+  basic functionality */
+		height: 250px;
+		max-height: 100%;
+	}
+
+	[data-reach-slider-input][data-disabled] {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+</style>

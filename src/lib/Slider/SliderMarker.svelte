@@ -43,3 +43,29 @@
 		<slot />
 	</div>
 {/if}
+
+<style>
+	:root {
+		--reach-slider: 1;
+	}
+
+	[data-reach-slider-marker] {
+		background: hsl(0, 0%, 50%);
+		transform-origin: center;
+		user-select: none;
+	}
+
+	[data-reach-slider-marker][data-orientation='horizontal'] {
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 3px;
+		height: 0.75rem;
+	}
+
+	[data-reach-slider-marker][data-orientation='vertical'] {
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 0.75rem;
+		height: 3px;
+	}
+</style>

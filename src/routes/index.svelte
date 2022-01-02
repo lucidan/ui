@@ -1,9 +1,6 @@
 <script>
-	import { rect } from '../lib';
+	import { rect, Slider, Alert } from '../lib';
 
-	import { Alert } from '../lib/alert';
-	import Slider from '../lib/slider/Slider.svelte';
-	import '../lib/Slider/styles.css';
 	let visible = false;
 </script>
 
