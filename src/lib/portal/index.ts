@@ -1,3 +1,8 @@
+/**
+ * @license MIT romkor
+ * @see https://github.com/romkor/svelte-portal
+ */
+
 import { tick } from 'svelte';
 
 /**
