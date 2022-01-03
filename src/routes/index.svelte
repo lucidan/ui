@@ -1,4 +1,5 @@
 <script>
+	import Dialog from '../lib/dialog/Dialog.svelte';
 	import { Alert, rect, Slider } from '../lib';
 	import { disableScroll } from '../lib/utils/actions/disable-scroll';
 	import { style } from '../lib/utils/style';
@@ -40,3 +41,11 @@
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br />
+
+<Dialog isOpen
+	>Hello
+
+	<p>
+		<button>Hooooo</button>
+	</p>
+</Dialog>
