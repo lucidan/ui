@@ -1,3 +1,5 @@
+import { getOwnerDocument } from '../owner-document';
+
 interface Options {
 	enabled?: boolean;
 	authorizedInInputs?: number[];
@@ -22,6 +24,8 @@ export const disableScroll = (node: HTMLElement, options: Options = {}) => {
 	} = options;
 
 	let lockToScrollPos: [number, number] = [0, 0];
+
+	const doc = getOwnerDocument(node);
 
 	update(options);
 
@@ -48,33 +52,37 @@ export const disableScroll = (node: HTMLElement, options: Options = {}) => {
 	}
 
 	function addListeners() {
+		const listen = doc.addEventListener;
+
 		if (disablePinchZoom) {
-			document.addEventListener('touchmove', handlePinchZoom, false);
+			listen('touchmove', handlePinchZoom, false);
 		}
 
 		if (disableWheel) {
-			document.addEventListener('wheel', handleWheel, { passive: false });
+			listen('wheel', handleWheel, { passive: false });
 		}
 
 		if (disableScroll) {
 			lockToScrollPos = [
-				document.scrollingElement?.scrollLeft ?? 0,
-				document.scrollingElement?.scrollTop ?? 0,
+				doc.scrollingElement?.scrollLeft ?? 0,
+				doc.scrollingElement?.scrollTop ?? 0,
 			];
 
-			document.addEventListener('scroll', handleScroll, { passive: false });
+			listen('scroll', handleScroll, { passive: false });
 		}
 
 		if (disableKeys) {
-			document.addEventListener('keydown', handleKeydown, { passive: false });
+			listen('keydown', handleKeydown, { passive: false });
 		}
 	}
 
 	function removeListeners() {
-		document.removeEventListener('wheel', handleWheel);
-		document.removeEventListener('touchmove', handlePinchZoom);
-		document.removeEventListener('scroll', handleScroll);
-		document.removeEventListener('keydown', handleKeydown);
+		const unlisten = doc.removeEventListener;
+
+		unlisten('wheel', handleWheel);
+		unlisten('touchmove', handlePinchZoom);
+		unlisten('scroll', handleScroll);
+		unlisten('keydown', handleKeydown);
 	}
 
 	function handlePinchZoom(e: TouchEvent) {
