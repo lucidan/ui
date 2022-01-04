@@ -99,14 +99,14 @@
 	on:click={composeEventHandlers(onClick, handleClick)}
 	on:keydown={composeEventHandlers(onKeyDown, handleKeyDown)}
 	on:mousedown={composeEventHandlers(onMouseDown, handleMouseDown)}
-	data-reach-dialog-overlay=""
+	data-lucidan-dialog-overlay=""
 >
 	<slot />
 </div>
 
 <style>
-	[data-reach-dialog-overlay] {
-		background: hsla(0, 0%, 0%, 0.33);
+	[data-lucidan-dialog-overlay] {
+		background: rgba(0, 0, 0, 0.33);
 		position: fixed;
 		top: 0;
 		right: 0;

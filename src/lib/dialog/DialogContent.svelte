@@ -17,7 +17,7 @@
 	role="dialog"
 	tabIndex={-1}
 	{...elementProps}
-	data-reach-dialog-content
+	data-lucidan-dialog-content
 	on:click={composeEventHandlers(onClick, (event) => {
 		event.stopPropagation();
 	})}
@@ -27,7 +27,7 @@
 </div>
 
 <style>
-	[data-reach-dialog-content] {
+	[data-lucidan-dialog-content] {
 		width: 50vw;
 		margin: 10vh auto;
 		background: white;

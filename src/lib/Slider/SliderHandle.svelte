@@ -46,7 +46,7 @@
 	aria-valuetext={ariaValueText}
 	role="slider"
 	tabIndex={disabled ? -1 : 0}
-	data-reach-slider-handle=""
+	data-lucidan-slider-handle=""
 	style={style({
 		position: 'absolute',
 		...(isVertical ? { bottom: handlePosition } : { left: handlePosition }),
@@ -59,7 +59,7 @@
 </div>
 
 <style>
-	[data-reach-slider-handle] {
+	[data-lucidan-slider-handle] {
 		width: 16px;
 		height: 16px;
 		background: #1159a6;
@@ -68,16 +68,16 @@
 		transform-origin: center;
 	}
 
-	[data-reach-slider-handle][aria-orientation='horizontal'] {
+	[data-lucidan-slider-handle][aria-orientation='horizontal'] {
 		top: 50%;
 		transform: translateY(-50%);
 	}
 
-	[data-reach-slider-handle][aria-orientation='horizontal']:focus {
+	[data-lucidan-slider-handle][aria-orientation='horizontal']:focus {
 		transform: translateY(-50%);
 	}
 
-	[data-reach-slider-handle][aria-orientation='vertical'] {
+	[data-lucidan-slider-handle][aria-orientation='vertical'] {
 		left: 50%;
 		transform: translateX(-50%);
 	}

@@ -12,7 +12,7 @@
 <div
 	bind:this={_element}
 	style={style({ position: 'absolute', ...rangeStyle })}
-	data-reach-slider-range=""
+	data-lucidan-slider-range=""
 	data-disabled={disabled ? '' : undefined}
 	data-orientation={orientation}
 >
@@ -20,7 +20,7 @@
 </div>
 
 <style>
-	[data-reach-slider-range] {
+	[data-lucidan-slider-range] {
 		border-radius: inherit;
 		background: #1159a6;
 		left: 0;
@@ -28,11 +28,11 @@
 		user-select: none;
 	}
 
-	[data-reach-slider-range][data-orientation='horizontal'] {
+	[data-lucidan-slider-range][data-orientation='horizontal'] {
 		height: 100%;
 	}
 
-	[data-reach-slider-range][data-orientation='vertical'] {
+	[data-lucidan-slider-range][data-orientation='vertical'] {
 		width: 100%;
 	}
 </style>

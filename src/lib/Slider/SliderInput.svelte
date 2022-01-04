@@ -418,7 +418,7 @@
 <div
 	{...elementProps}
 	bind:this={sliderEl}
-	data-reach-slider-input=""
+	data-lucidan-slider-input=""
 	data-disabled={disabled ? '' : undefined}
 	data-orientation={orientation}
 	tabIndex={-1}
@@ -438,16 +438,16 @@
 </div>
 
 <style>
-	[data-reach-slider-input] {
+	[data-lucidan-slider-input] {
 		max-width: 100%;
 		user-select: none;
 	}
 
-	[data-reach-slider-input][data-orientation='horizontal'] {
+	[data-lucidan-slider-input][data-orientation='horizontal'] {
 		height: 0.5rem;
 	}
 
-	[data-reach-slider-input][data-orientation='vertical'] {
+	[data-lucidan-slider-input][data-orientation='vertical'] {
 		width: 0.5rem;
 		/* the height is somewhat arbitrary but necessary for vertical sliders for
   basic functionality */
@@ -455,7 +455,7 @@
 		max-height: 100%;
 	}
 
-	[data-reach-slider-input][data-disabled] {
+	[data-lucidan-slider-input][data-disabled] {
 		opacity: 0.5;
 		pointer-events: none;
 	}

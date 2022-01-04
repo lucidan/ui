@@ -10,13 +10,13 @@
 </script>
 
 <!-- Actually rendered area -->
-<div data-reach-alert><slot /></div>
+<div data-lucidan-alert><slot /></div>
 
 <!-- Regions -->
 <div use:portal>
 	<VisuallyHidden>
-		<div data-reach-live-polite="true" bind:this={politeRegion} />
-		<div data-reach-live-assertive="true" bind:this={assertiveRegion} />
+		<div data-lucidan-live-polite="true" bind:this={politeRegion} />
+		<div data-lucidan-live-assertive="true" bind:this={assertiveRegion} />
 	</VisuallyHidden>
 </div>
 

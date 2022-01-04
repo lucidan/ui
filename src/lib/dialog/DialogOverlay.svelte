@@ -32,7 +32,7 @@
 </script>
 
 {#if isOpen}
-	<div use:portal data-reach-dialog-wrapper>
+	<div use:portal data-lucidan-dialog-wrapper>
 		<DialogInner
 			bind:element={_element}
 			{initialFocusEl}
