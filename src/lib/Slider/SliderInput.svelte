@@ -438,10 +438,6 @@
 </div>
 
 <style>
-	:root {
-		--reach-slider: 1;
-	}
-
 	[data-reach-slider-input] {
 		max-width: 100%;
 		user-select: none;

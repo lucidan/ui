@@ -45,10 +45,6 @@
 {/if}
 
 <style>
-	:root {
-		--reach-slider: 1;
-	}
-
 	[data-reach-slider-marker] {
 		background: hsl(0, 0%, 50%);
 		transform-origin: center;

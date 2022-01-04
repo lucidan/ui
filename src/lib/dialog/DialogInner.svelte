@@ -105,11 +105,6 @@
 </div>
 
 <style>
-	/* Used to detect in JavaScript if apps have loaded styles or not. */
-	:root {
-		--reach-dialog: 1;
-	}
-
 	[data-reach-dialog-overlay] {
 		background: hsla(0, 0%, 0%, 0.33);
 		position: fixed;

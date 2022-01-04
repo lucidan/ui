@@ -59,10 +59,6 @@
 </div>
 
 <style>
-	:root {
-		--reach-slider: 1;
-	}
-
 	[data-reach-slider-handle] {
 		width: 16px;
 		height: 16px;

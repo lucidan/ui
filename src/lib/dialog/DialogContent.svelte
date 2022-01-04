@@ -27,11 +27,6 @@
 </div>
 
 <style>
-	/* Used to detect in JavaScript if apps have loaded styles or not. */
-	:root {
-		--reach-dialog: 1;
-	}
-
 	[data-reach-dialog-content] {
 		width: 50vw;
 		margin: 10vh auto;

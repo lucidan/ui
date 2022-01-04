@@ -20,10 +20,6 @@
 </div>
 
 <style>
-	:root {
-		--reach-slider: 1;
-	}
-
 	[data-reach-slider-range] {
 		border-radius: inherit;
 		background: #1159a6;

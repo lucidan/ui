@@ -18,10 +18,6 @@
 </div>
 
 <style>
-	:root {
-		--reach-slider: 1;
-	}
-
 	[data-reach-slider-track] {
 		position: relative;
 		border-radius: 0.25rem;
